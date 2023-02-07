@@ -25,17 +25,17 @@ public class Card_UI : MonoBehaviour
 
     private void UpdateUI()
     {
-        cardImage.sprite = _card.heroSprite;
-        cardName.text = _card.heroName;
-        cardDescription.text = _card.heroDescription;
-        attackText.text = $"{_card.AttackValue}";
-        healthText.text = $"{_card.HealthValue}";
-        manaText.text = $"{_card.ManaValue}";
+        cardImage.sprite = _card.CurrentHero.heroSprite;
+        cardName.text = _card.CurrentHero.heroName;
+        cardDescription.text = _card.CurrentHero.heroDescription;
+        attackText.text = $"{_card.CurrentHero.AttackValue}";
+        healthText.text = $"{_card.CurrentHero.HealthValue}";
+        manaText.text = $"{_card.CurrentHero.ManaValue}";
     }
 
     private void ResetCardValue()
     {
-        _card.ResetCardValue();
+        _card.CurrentHero.ResetCardValue();
         UpdateUI();
     }
 } 

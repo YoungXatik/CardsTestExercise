@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e807033502f184ebda2f8aa63ab7e6, type: 3}
+  m_Name: Legion Commander
+  m_EditorClassIdentifier: 
+  heroSprite: {fileID: 21300000, guid: 385890ba79bc6f641929852ebafc98b8, type: 3}
+  heroName: LEGION COMMANDER
+  heroDescription: "\u0421\u0422\u0410\u041D\u041E\u0412\u0418\u0422\u0421\u042F
+    \u0421\u0418\u041B\u042C\u041D\u0415\u0415 \u0421 \u041A\u0410\u0416\u0414\u041E\u0419
+    \u041F\u041E\u0411\u0415\u0414\u041E\u0419 \u0412 \u0414\u0423\u042D\u041B\u0418"
+  maxAttackValue: 9
+  minAttackValue: 1
+  maxHealthValue: 9
+  minHealthValue: 1
+  maxManaValue: 9
+  minManaValue: 1
