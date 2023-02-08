@@ -29,9 +29,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardValues.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Events/Events.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardsInHands/CardsDeck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Card/Card_UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDragAndDrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDeckSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Card/Card_UI.cs" />
       </list>
     </option>
   </component>

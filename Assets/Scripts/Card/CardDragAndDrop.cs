@@ -17,7 +17,7 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Transform _dragAndDropCanvas;
 
     private CardsDeck _cardsDeck;
-    private Card_UI _cardUI;
+    public Card_UI _cardUI { get; private set; }
 
     private CanvasGroup _canvasGroup;
 
@@ -37,13 +37,13 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         Debug.Log("Begin");
         _canvasGroup.blocksRaycasts = false;
-        _canvasGroup.alpha = 0.6f;
         _cardUI.StartIgnoreRaycasts();
         var slotTransform = _rectTransform.parent;
         slotTransform.SetAsLastSibling();
         transform.parent = _dragAndDropCanvas;
         transform.rotation = Quaternion.identity;
         _cardsDeck.currentCards.Remove(this.GetComponent<CardValues>());
+        _cardUI.StartFillingImage();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -63,8 +63,8 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.Rotate(_startRotation);
             _cardsDeck.ResetCardsRotation();
             _cardUI.CancelIgnoreRaycasts();
-            _canvasGroup.alpha = 1f;
             _canvasGroup.blocksRaycasts = true;
+            _cardUI.CancelFillingImage();
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class Card_UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI attackText, healthText, manaText;
 
     [SerializeField] private Image backgroundImage;
+
+    private Sequence Seq;
     private void OnEnable()
     {
         Events.OnCardValuesReset += UpdateUI;
@@ -58,5 +61,21 @@ public class Card_UI : MonoBehaviour
         cardHeroImage.raycastTarget = true;
         cardImage.raycastTarget = true;
         backgroundImage.raycastTarget = true;
+    }
+
+    public void StartFillingImage()
+    {
+        Seq = DOTween.Sequence();
+        Seq.Append(backgroundImage.DOFillAmount(0, 0.4f).SetEase(Ease.Linear).OnComplete(delegate
+        {
+            backgroundImage.DOFillAmount(0, 0.4f).SetEase(Ease.Linear);
+        }));
+        Seq.SetLoops(-1);
+    }
+
+    public void CancelFillingImage()
+    {
+        Seq.Kill();
+        backgroundImage.DOFillAmount(1, 0.1f);
     }
 } 
