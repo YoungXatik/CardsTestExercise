@@ -40,6 +40,8 @@
         <e p="Scripts" t="Include">
           <e p="Card" t="Include">
             <e p="Card_UI.cs" t="Include" />
+            <e p="CardDeckSlot.cs" t="Include" />
+            <e p="CardDragAndDrop.cs" t="Include" />
             <e p="CardHeroes.cs" t="Include" />
             <e p="CardsInteract.cs" t="Include" />
             <e p="CardValues.cs" t="Include" />

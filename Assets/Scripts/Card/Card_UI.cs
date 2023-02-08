@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class Card_UI : MonoBehaviour
 {
     private CardValues _card;
-    
+
     [SerializeField] private Image cardImage;
+    [SerializeField] private Image cardHeroImage;
 
     [SerializeField] private TextMeshProUGUI cardName, cardDescription;
 
     [SerializeField] private TextMeshProUGUI attackText, healthText, manaText;
 
+    [SerializeField] private Image backgroundImage;
     private void OnEnable()
     {
         Events.OnCardValuesReset += UpdateUI;
@@ -36,11 +38,25 @@ public class Card_UI : MonoBehaviour
 
     public void UpdateUI()
     {
-        cardImage.sprite = _card.heroSprite;
+        cardHeroImage.sprite = _card.heroSprite;
         cardName.text = _card.heroName;
         cardDescription.text = _card.heroDescription;
         attackText.text = $"{Mathf.RoundToInt(_card.AttackValue)}";
         healthText.text = $"{Mathf.RoundToInt(_card.HealthValue)}";
         manaText.text = $"{Mathf.RoundToInt(_card.ManaValue)}";
+    }
+
+    public void StartIgnoreRaycasts()
+    {
+        cardHeroImage.raycastTarget = false;
+        cardImage.raycastTarget = false;
+        backgroundImage.raycastTarget = false;
+    }
+
+    public void CancelIgnoreRaycasts()
+    {
+        cardHeroImage.raycastTarget = true;
+        cardImage.raycastTarget = true;
+        backgroundImage.raycastTarget = true;
     }
 } 

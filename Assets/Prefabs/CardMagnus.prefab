@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3882063043017372535}
   - component: {fileID: 9090137657442145111}
   - component: {fileID: 6030704732664781440}
+  - component: {fileID: 2722015539298729173}
+  - component: {fileID: 1741391372233859615}
   m_Layer: 5
   m_Name: CardMagnus
   m_TagString: Untagged
@@ -51,12 +53,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187d76db5d5854583a68e1a90ba7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 3882063043266141086}
+  cardImage: {fileID: 3882063043409262860}
+  cardHeroImage: {fileID: 3882063043266141086}
   cardName: {fileID: 3882063043476738955}
   cardDescription: {fileID: 3882063043374356931}
   attackText: {fileID: 3882063044411763511}
   healthText: {fileID: 3882063043788802005}
   manaText: {fileID: 3882063044496446983}
+  backgroundImage: {fileID: 3882063043898495236}
 --- !u!114 &6030704732664781440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +81,30 @@ MonoBehaviour:
   maxAttackValue: 9
   maxHealthValue: 9
   maxManaValue: 9
+--- !u!114 &2722015539298729173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882063043017372534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69350c5a1932b4ea59933dfc945261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &1741391372233859615
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882063043017372534}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3882063043266141084
 GameObject:
   m_ObjectHideFlags: 0

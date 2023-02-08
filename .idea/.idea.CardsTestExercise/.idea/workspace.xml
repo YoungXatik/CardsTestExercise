@@ -15,6 +15,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardsInHands/CardsDeck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/Events.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Card/CardsInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Card/CardDragAndDrop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Card/CardDeckSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Card/Card_UI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -23,11 +25,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardsInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardsInHands.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardsInHands/CardsInHands.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/Events.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardHeroes.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardValues.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Events/Events.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardsInHands/CardsDeck.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/Card_UI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardValues.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDragAndDrop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDeckSlot.cs" />
       </list>
     </option>
   </component>
@@ -79,5 +83,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="769" y="217" key="RiderGenerateDialog" timestamp="1675863265039">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="769" y="217" key="RiderGenerateDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1675863265039" />
   </component>
 </project>

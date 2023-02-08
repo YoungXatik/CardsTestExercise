@@ -440,6 +440,8 @@ GameObject:
   - component: {fileID: 4962075801064341758}
   - component: {fileID: 1091461459751592158}
   - component: {fileID: 2500149129451677961}
+  - component: {fileID: -5522526570156082256}
+  - component: {fileID: 1654600180797023686}
   m_Layer: 5
   m_Name: CardMeepo
   m_TagString: Untagged
@@ -480,12 +482,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187d76db5d5854583a68e1a90ba7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 4962075800748992535}
+  cardImage: {fileID: 4962075800672979589}
+  cardHeroImage: {fileID: 4962075800748992535}
   cardName: {fileID: 4962075800605171714}
   cardDescription: {fileID: 4962075800640186954}
   attackText: {fileID: 4962075801759373502}
   healthText: {fileID: 4962075801300005980}
   manaText: {fileID: 4962075801741272462}
+  backgroundImage: {fileID: 4962075801257616013}
 --- !u!114 &2500149129451677961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +509,30 @@ MonoBehaviour:
   maxAttackValue: 9
   maxHealthValue: 9
   maxManaValue: 9
+--- !u!114 &-5522526570156082256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962075801064341759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69350c5a1932b4ea59933dfc945261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &1654600180797023686
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962075801064341759}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4962075801257616019
 GameObject:
   m_ObjectHideFlags: 0

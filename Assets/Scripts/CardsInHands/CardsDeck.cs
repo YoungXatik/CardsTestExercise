@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -33,6 +34,8 @@ public class CardsDeck : MonoBehaviour
 
     private int _currentCardIndex;
 
+    public Transform currentCanvas;
+    public Transform dragAndDropCanvas;
     private void Start()
     {
         _cardsCount = Random.Range(_minCardsCount, maxCardsCount);
@@ -58,5 +61,15 @@ public class CardsDeck : MonoBehaviour
         {
             _currentCardIndex = 0;
         }
+    }
+
+    public void ResetCardsRotation()
+    {
+        _rotationZOffset = 2 * (startZRotation / _cardsCount);
+        for (int i = 0; i < currentCards.Count; i++)
+        {
+            currentCards[i].transform.rotation = Quaternion.Euler(0,0,startZRotation - (i * _rotationZOffset));
+        }
+
     }
 }

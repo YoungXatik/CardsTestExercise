@@ -725,6 +725,8 @@ GameObject:
   - component: {fileID: 4699137133458844994}
   - component: {fileID: 779056351634263394}
   - component: {fileID: 2835074887881704629}
+  - component: {fileID: -2640415675712399887}
+  - component: {fileID: 2961185151794936742}
   m_Layer: 5
   m_Name: CardPudge
   m_TagString: Untagged
@@ -765,12 +767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187d76db5d5854583a68e1a90ba7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 4699137133709706667}
+  cardImage: {fileID: 4699137133850732345}
+  cardHeroImage: {fileID: 4699137133709706667}
   cardName: {fileID: 4699137133784059326}
   cardDescription: {fileID: 4699137133817989110}
   attackText: {fileID: 4699137132571407618}
   healthText: {fileID: 4699137133156604384}
   manaText: {fileID: 4699137132792399922}
+  backgroundImage: {fileID: 4699137133131878193}
 --- !u!114 &2835074887881704629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +794,30 @@ MonoBehaviour:
   maxAttackValue: 9
   maxHealthValue: 9
   maxManaValue: 9
+--- !u!114 &-2640415675712399887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699137133458844995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69350c5a1932b4ea59933dfc945261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &2961185151794936742
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699137133458844995}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4699137133709706665
 GameObject:
   m_ObjectHideFlags: 0

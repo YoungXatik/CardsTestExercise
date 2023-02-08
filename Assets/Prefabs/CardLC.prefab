@@ -512,6 +512,8 @@ GameObject:
   - component: {fileID: 9190338619930461076}
   - component: {fileID: 3779601478172746676}
   - component: {fileID: 1865653038668769891}
+  - component: {fileID: -5529129281779299625}
+  - component: {fileID: 3325699940971823120}
   m_Layer: 5
   m_Name: CardLC
   m_TagString: Untagged
@@ -552,12 +554,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187d76db5d5854583a68e1a90ba7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 9190338620185537405}
+  cardImage: {fileID: 9190338620327594479}
+  cardHeroImage: {fileID: 9190338620185537405}
   cardName: {fileID: 9190338620259623784}
   cardDescription: {fileID: 9190338620294867232}
   attackText: {fileID: 9190338619048401876}
   healthText: {fileID: 9190338620703029046}
   manaText: {fileID: 9190338619265214180}
+  backgroundImage: {fileID: 9190338620677382631}
 --- !u!114 &1865653038668769891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +582,30 @@ MonoBehaviour:
   maxAttackValue: 9
   maxHealthValue: 9
   maxManaValue: 9
+--- !u!114 &-5529129281779299625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190338619930461077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69350c5a1932b4ea59933dfc945261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &3325699940971823120
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190338619930461077}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9190338620185537407
 GameObject:
   m_ObjectHideFlags: 0

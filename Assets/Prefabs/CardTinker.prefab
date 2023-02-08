@@ -941,6 +941,8 @@ GameObject:
   - component: {fileID: 1958978627915507422}
   - component: {fileID: 5825057995787667198}
   - component: {fileID: 9025553863012568873}
+  - component: {fileID: -7144451656461214563}
+  - component: {fileID: 4430374593006020193}
   m_Layer: 5
   m_Name: CardTinker
   m_TagString: Untagged
@@ -981,12 +983,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187d76db5d5854583a68e1a90ba7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 1958978627593326135}
+  cardImage: {fileID: 1958978627786779813}
+  cardHeroImage: {fileID: 1958978627593326135}
   cardName: {fileID: 1958978627720627746}
   cardDescription: {fileID: 1958978627752463466}
   attackText: {fileID: 1958978626448866974}
   healthText: {fileID: 1958978628149613180}
   manaText: {fileID: 1958978626701837230}
+  backgroundImage: {fileID: 1958978628108240045}
 --- !u!114 &9025553863012568873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,6 +1011,30 @@ MonoBehaviour:
   maxAttackValue: 9
   maxHealthValue: 9
   maxManaValue: 9
+--- !u!114 &-7144451656461214563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958978627915507423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69350c5a1932b4ea59933dfc945261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &4430374593006020193
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958978627915507423}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1958978628108240051
 GameObject:
   m_ObjectHideFlags: 0
