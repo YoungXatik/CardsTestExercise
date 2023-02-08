@@ -34,13 +34,13 @@ public class Card_UI : MonoBehaviour
         UpdateUI();
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         cardImage.sprite = _card.heroSprite;
         cardName.text = _card.heroName;
         cardDescription.text = _card.heroDescription;
-        attackText.text = $"{_card.AttackValue}";
-        healthText.text = $"{_card.HealthValue}";
-        manaText.text = $"{_card.ManaValue}";
+        attackText.text = $"{Mathf.RoundToInt(_card.AttackValue)}";
+        healthText.text = $"{Mathf.RoundToInt(_card.HealthValue)}";
+        manaText.text = $"{Mathf.RoundToInt(_card.ManaValue)}";
     }
 } 
