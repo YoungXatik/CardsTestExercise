@@ -66,16 +66,16 @@ public class Card_UI : MonoBehaviour
     public void StartFillingImage()
     {
         Seq = DOTween.Sequence();
-        Seq.Append(backgroundImage.DOFillAmount(0, 0.4f).SetEase(Ease.Linear).OnComplete(delegate
+        Seq.Append(backgroundImage.DOFade(0, 0.5f).SetEase(Ease.Linear).OnComplete(delegate
         {
-            backgroundImage.DOFillAmount(0, 0.4f).SetEase(Ease.Linear);
+            backgroundImage.DOFade(1, 0.5f).SetEase(Ease.Linear);
         }));
-        Seq.SetLoops(-1);
+        Seq.SetLoops(-1,LoopType.Yoyo);
     }
 
     public void CancelFillingImage()
     {
         Seq.Kill();
-        backgroundImage.DOFillAmount(1, 0.1f);
+        backgroundImage.DOFade(1, 0.1f);
     }
 } 

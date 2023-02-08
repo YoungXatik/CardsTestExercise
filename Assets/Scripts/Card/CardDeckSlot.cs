@@ -12,7 +12,6 @@ public class CardDeckSlot : MonoBehaviour, IDropHandler
         var cardTransform = eventData.pointerDrag.transform;
         cardTransform.SetParent(transform);
         cardTransform.localPosition = Vector3.zero;
-        cardTransform.GetComponent<CardDragAndDrop>()._cardUI.CancelFillingImage();
     }
 
     

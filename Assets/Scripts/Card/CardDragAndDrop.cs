@@ -1,15 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private RectTransform _rectTransform;
 
-    private Vector2 _startPosition;
+    private Vector2 _startPosition = new Vector2(-800,-800);
     private Vector3 _startRotation;
     
 
@@ -24,7 +21,6 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
-        _startPosition = transform.position;
         _startRotation = transform.rotation.eulerAngles;
         _canvasGroup = GetComponent<CanvasGroup>();
         _cardsDeck = GetComponentInParent<CardsDeck>();
@@ -36,6 +32,7 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin");
+        UpScaleCardInHand();
         _canvasGroup.blocksRaycasts = false;
         _cardUI.StartIgnoreRaycasts();
         var slotTransform = _rectTransform.parent;
@@ -58,13 +55,26 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (transform.parent == _dragAndDropCanvas)
         {
             _cardsDeck.currentCards.Add(this.GetComponent<CardValues>());
-            transform.parent = _currentCanvas;
-            _rectTransform.anchoredPosition = _startPosition;
-            transform.Rotate(_startRotation);
+            _rectTransform.DOLocalMove(_startPosition, 0.25f).SetEase(Ease.Linear).OnComplete(delegate
+            {
+                transform.parent = _currentCanvas;
+            });
+            transform.DORotate(_startRotation,0.25f).SetEase(Ease.Linear);
             _cardsDeck.ResetCardsRotation();
-            _cardUI.CancelIgnoreRaycasts();
-            _canvasGroup.blocksRaycasts = true;
-            _cardUI.CancelFillingImage();
         }
+        DownScaleCardOnDeck();
+        _cardUI.CancelIgnoreRaycasts();
+        _canvasGroup.blocksRaycasts = true;
+        _cardUI.CancelFillingImage();
+    }
+
+    private void UpScaleCardInHand()
+    {
+        transform.DOScale(transform.localScale * 1.4f, 0.15f).SetEase(Ease.Linear);
+    }
+
+    private void DownScaleCardOnDeck()
+    {
+        transform.DOScale(1, 0.15f).SetEase(Ease.Linear);
     }
 }

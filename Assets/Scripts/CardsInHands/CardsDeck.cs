@@ -56,8 +56,12 @@ public class CardsDeck : MonoBehaviour
             Vector2 currentCardPosition = new Vector2(firstCardInCardPlacement.x + (cardOffset.x * currentCards.Count),
                 firstCardInCardPlacement.y + (cardOffset.y * currentCards.Count));
             currentCards.Add(Instantiate(cards[Random.Range(0, cards.Count)], spawnOffScreenPosition, Quaternion.identity,
-                gameObject.transform));
-            currentCards[i].transform.DOLocalMove(currentCardPosition, spawnDelay).SetEase(Ease.Linear);
+                dragAndDropCanvas));
+            currentCards[i].transform.DOLocalMove(currentCardPosition, spawnDelay).SetEase(Ease.Linear).OnComplete(
+                delegate
+                {
+                    currentCards[i].transform.parent = currentCanvas;
+                });
             currentCards[i].transform.rotation =
                 Quaternion.Euler(0, 0, startZRotation - (currentCards.Count * _rotationZOffset));
             yield return new WaitForSeconds(spawnDelay);

@@ -28,9 +28,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardHeroes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardValues.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Events/Events.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDragAndDrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDeckSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Card/Card_UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Card/CardDragAndDrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CardsInHands/CardsDeck.cs" />
       </list>
     </option>
@@ -76,6 +76,7 @@
       <workItem from="1675779580660" duration="2870000" />
       <workItem from="1675788834321" duration="4950000" />
       <workItem from="1675853706376" duration="3370000" />
+      <workItem from="1675884414526" duration="2263000" />
     </task>
     <servers />
   </component>
