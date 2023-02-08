@@ -8,19 +8,25 @@ public class CardHeroes : ScriptableObject
     public string heroName;
     public string heroDescription;
 
-    [SerializeField] private int maxAttackValue, minAttackValue;
+    [Range(2,9)]
+    [SerializeField] private int maxAttackValue;
+    private int _minAttackValue = 2;
     public int AttackValue { get; private set; }
     
-    [SerializeField] private int maxHealthValue, minHealthValue;
+    [Range(2,9)]
+    [SerializeField] private int maxHealthValue;
+    private int _minHealthValue = 2;
     public int HealthValue { get; private set; }
     
-    [SerializeField] private int maxManaValue, minManaValue;
+    [Range(2,9)]
+    [SerializeField] private int maxManaValue;
+    private int _minManaValue = 2;
     public int ManaValue { get; private set; }
     
     public void ResetCardValue()
     {
-        AttackValue = Random.Range(minAttackValue, maxAttackValue);
-        HealthValue = Random.Range(minHealthValue, maxHealthValue);
-        ManaValue = Random.Range(minManaValue, maxManaValue);
+        AttackValue = Random.Range(_minAttackValue, maxAttackValue);
+        HealthValue = Random.Range(_minHealthValue, maxHealthValue);
+        ManaValue = Random.Range(_minManaValue, maxManaValue);
     }
 }

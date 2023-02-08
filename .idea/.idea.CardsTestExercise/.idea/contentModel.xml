@@ -9,6 +9,7 @@
         <e p="Art" t="Include">
           <e p="HeroImage" t="Include" />
         </e>
+        <e p="Data" t="Include" />
         <e p="Prefabs" t="Include">
           <e p="Cards" t="Include" />
         </e>
@@ -17,7 +18,12 @@
           <e p="Card" t="Include">
             <e p="Card_UI.cs" t="Include" />
             <e p="CardHeroes.cs" t="Include" />
+            <e p="CardsInteract.cs" t="Include" />
             <e p="CardValues.cs" t="Include" />
+          </e>
+          <e p="CardsInHands" t="Include">
+            <e p="CardsDeck.cs" t="Include" />
+            <e p="CardsInHands.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
