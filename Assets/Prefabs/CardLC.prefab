@@ -570,7 +570,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f267cc2dc01074ab21549c32311d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHero: {fileID: 11400000, guid: ad9c475c1b24f7a43b0cf278824ad6f5, type: 2}
+  heroSprite: {fileID: 21300000, guid: 385890ba79bc6f641929852ebafc98b8, type: 3}
+  heroName: LEGION COMMANDER
+  heroDescription: "\u0421\u0422\u0410\u041D\u041E\u0412\u0418\u0422\u0421\u042F
+    \u0421\u0418\u041B\u042C\u041D\u0415\u0415 \u0421 \u041A\u0410\u0416\u0414\u041E\u0419
+    \u041F\u041E\u0411\u0415\u0414\u041E\u0419 \u0412 \u0414\u0423\u042D\u041B\u0418"
+  maxAttackValue: 9
+  maxHealthValue: 9
+  maxManaValue: 9
 --- !u!1 &9190338620185537407
 GameObject:
   m_ObjectHideFlags: 0

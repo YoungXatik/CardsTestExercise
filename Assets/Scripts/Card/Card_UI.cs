@@ -13,6 +13,16 @@ public class Card_UI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI attackText, healthText, manaText;
 
+    private void OnEnable()
+    {
+        Events.OnCardValuesReset += UpdateUI;
+    }
+
+    private void OnDisable()
+    {
+        Events.OnCardValuesReset -= UpdateUI;
+    }
+
     private void Awake()
     {
         _card = GetComponent<CardValues>();
@@ -20,22 +30,17 @@ public class Card_UI : MonoBehaviour
     
     private void Start()
     {
+        _card.ResetCardValue();
         UpdateUI();
     }
 
     private void UpdateUI()
     {
-        cardImage.sprite = _card.CurrentHero.heroSprite;
-        cardName.text = _card.CurrentHero.heroName;
-        cardDescription.text = _card.CurrentHero.heroDescription;
-        attackText.text = $"{_card.CurrentHero.AttackValue}";
-        healthText.text = $"{_card.CurrentHero.HealthValue}";
-        manaText.text = $"{_card.CurrentHero.ManaValue}";
-    }
-
-    private void ResetCardValue()
-    {
-        _card.CurrentHero.ResetCardValue();
-        UpdateUI();
+        cardImage.sprite = _card.heroSprite;
+        cardName.text = _card.heroName;
+        cardDescription.text = _card.heroDescription;
+        attackText.text = $"{_card.AttackValue}";
+        healthText.text = $"{_card.HealthValue}";
+        manaText.text = $"{_card.ManaValue}";
     }
 } 

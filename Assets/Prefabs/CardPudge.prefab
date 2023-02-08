@@ -783,7 +783,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f267cc2dc01074ab21549c32311d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHero: {fileID: 11400000, guid: baa9369bf757de1448c44c5e97b36c8e, type: 2}
+  heroSprite: {fileID: 21300000, guid: 51f6ec7affff77e45956bd958532b288, type: 3}
+  heroName: PUDGE
+  heroDescription: "\u041F\u0420\u0418\u0422\u042F\u0413\u0418\u0412\u0410\u0415\u0422
+    \u0412\u0420\u0410\u0413\u041E\u0412 \u0421\u0412\u041E\u0418\u041C \u041A\u0420\u042E\u041A\u041E\u041C"
+  maxAttackValue: 9
+  maxHealthValue: 9
+  maxManaValue: 9
 --- !u!1 &4699137133709706665
 GameObject:
   m_ObjectHideFlags: 0

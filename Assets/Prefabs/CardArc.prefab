@@ -498,7 +498,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f267cc2dc01074ab21549c32311d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHero: {fileID: 11400000, guid: e1093ecd4f345f64eb040b75a704c556, type: 2}
+  heroSprite: {fileID: 21300000, guid: 6a7684ca1eac54141a7334428bb1d300, type: 3}
+  heroName: ARC WARDEN
+  heroDescription: "\u041A\u041E\u041F\u0418\u0420\u0423\u0415\u0422 \u0421\u0415\u0411\u042F,
+    \u0427\u0422\u041E\u0411\u042B \u0412\u0415\u0421\u0422\u0418 \u0412\u041E\u0419\u041D\u0423
+    \u041D\u0410 \u0414\u0412\u0410 \u0424\u0420\u041E\u041D\u0422\u0410"
+  maxAttackValue: 9
+  maxHealthValue: 9
+  maxManaValue: 9
 --- !u!1 &8632566865290544633
 GameObject:
   m_ObjectHideFlags: 0

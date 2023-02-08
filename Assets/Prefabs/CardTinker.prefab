@@ -999,7 +999,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f267cc2dc01074ab21549c32311d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHero: {fileID: 11400000, guid: 7997389d7ccb1c14889bb1b2be454722, type: 2}
+  heroSprite: {fileID: 21300000, guid: 50d2e7c7a30c47e4ba2aa65190d2b341, type: 3}
+  heroName: TINKER
+  heroDescription: "\u0423\u041D\u0418\u0427\u0422\u041E\u0416\u0410\u0415\u0422
+    \u0412\u0420\u0410\u0413\u041E\u0412 \u041F\u041E\u041B\u0427\u0418\u0429\u0410\u041C\u0418
+    \u0421\u0412\u041E\u0418\u0425 \u041C\u0415\u0425\u0410\u041D\u0418\u0417\u041C\u041E\u0412"
+  maxAttackValue: 9
+  maxHealthValue: 9
+  maxManaValue: 9
 --- !u!1 &1958978628108240051
 GameObject:
   m_ObjectHideFlags: 0
