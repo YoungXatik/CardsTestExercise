@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -18,6 +19,10 @@ public class CardsDeck : MonoBehaviour
 
     #endregion
 
+    [SerializeField] private float spawnDelay;
+
+    [SerializeField] private Vector2 spawnOffScreenPosition;
+    
     [SerializeField] private Vector2 firstCardInCardPlacement;
 
     [SerializeField] private Vector2 cardOffset;
@@ -38,6 +43,11 @@ public class CardsDeck : MonoBehaviour
     public Transform dragAndDropCanvas;
     private void Start()
     {
+        StartCoroutine(SpawnCards());
+    }
+
+    private IEnumerator SpawnCards()
+    {
         _cardsCount = Random.Range(_minCardsCount, maxCardsCount);
         _rotationZOffset = 2 * (startZRotation / _cardsCount);
 
@@ -45,11 +55,12 @@ public class CardsDeck : MonoBehaviour
         {
             Vector2 currentCardPosition = new Vector2(firstCardInCardPlacement.x + (cardOffset.x * currentCards.Count),
                 firstCardInCardPlacement.y + (cardOffset.y * currentCards.Count));
-            currentCards.Add(Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity,
+            currentCards.Add(Instantiate(cards[Random.Range(0, cards.Count)], spawnOffScreenPosition, Quaternion.identity,
                 gameObject.transform));
-            currentCards[i].transform.localPosition = currentCardPosition;
+            currentCards[i].transform.DOLocalMove(currentCardPosition, spawnDelay).SetEase(Ease.Linear);
             currentCards[i].transform.rotation =
                 Quaternion.Euler(0, 0, startZRotation - (currentCards.Count * _rotationZOffset));
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 

@@ -549,6 +549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11f2901eeea14e4abcc46d14a66d567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnDelay: 0.3
+  spawnOffScreenPosition: {x: 2500, y: 2500}
   firstCardInCardPlacement: {x: -545, y: -450}
   cardOffset: {x: 135, y: 5}
   startZRotation: 25
