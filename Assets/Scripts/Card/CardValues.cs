@@ -53,4 +53,27 @@ public class CardValues : MonoBehaviour
         });
         Events.OnCardValueResetInvoke();
     }
+
+    public void TakeDamage()
+    {
+        transform.DOScale(1.4f, 0.05f).SetEase(Ease.Linear).OnComplete(delegate
+        {
+            transform.DOScale(1f, 0.05f).SetEase(Ease.Linear).OnComplete(delegate
+            {
+                HealthValue -= 1;
+                _cardUI.UpdateUI();
+                if (HealthValue <= 0)
+                {
+                    _cardUI.FillOutCardImages();
+                }
+            });
+        });
+    }
+
+    public void RemoveCardFromDeck()
+    {
+        Destroy(gameObject);
+        CardsDeck.Instance.currentCards.Remove(this);
+        CardsDeck.Instance.ResetCardsRotation();
+    }
 }

@@ -78,4 +78,16 @@ public class Card_UI : MonoBehaviour
         Seq.Kill();
         backgroundImage.DOFade(1, 0.1f);
     }
+
+    public void FillOutCardImages()
+    {
+        cardName.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        cardDescription.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        attackText.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        healthText.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        manaText.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        cardImage.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        cardHeroImage.DOFade(0, 0.5f).SetEase(Ease.Linear);
+        backgroundImage.DOFade(0, 0.5f).SetEase(Ease.Linear).OnComplete(_card.RemoveCardFromDeck);
+    }
 } 

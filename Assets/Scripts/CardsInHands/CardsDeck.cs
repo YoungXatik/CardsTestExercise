@@ -85,6 +85,13 @@ public class CardsDeck : MonoBehaviour
         {
             currentCards[i].transform.rotation = Quaternion.Euler(0,0,startZRotation - (i * _rotationZOffset));
         }
+    }
 
+    public void HitFirstCard()
+    {
+        if (currentCards.Count != 0)
+        {
+            currentCards[0].TakeDamage();
+        }
     }
 }

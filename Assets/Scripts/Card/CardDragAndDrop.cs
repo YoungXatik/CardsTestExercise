@@ -12,8 +12,6 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     private Transform _currentCanvas;
     private Transform _dragAndDropCanvas;
-
-    private CardsDeck _cardsDeck;
     public Card_UI _cardUI { get; private set; }
 
     private CanvasGroup _canvasGroup;
@@ -23,10 +21,9 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         _rectTransform = GetComponent<RectTransform>();
         _startRotation = transform.rotation.eulerAngles;
         _canvasGroup = GetComponent<CanvasGroup>();
-        _cardsDeck = GetComponentInParent<CardsDeck>();
         _cardUI = GetComponentInParent<Card_UI>();
-        _currentCanvas = _cardsDeck.currentCanvas;
-        _dragAndDropCanvas = _cardsDeck.dragAndDropCanvas;
+        _currentCanvas = CardsDeck.Instance.currentCanvas;
+        _dragAndDropCanvas = CardsDeck.Instance.dragAndDropCanvas;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -39,7 +36,7 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         slotTransform.SetAsLastSibling();
         transform.parent = _dragAndDropCanvas;
         transform.rotation = Quaternion.identity;
-        _cardsDeck.currentCards.Remove(this.GetComponent<CardValues>());
+        CardsDeck.Instance.currentCards.Remove(this.GetComponent<CardValues>());
         _cardUI.StartFillingImage();
     }
 
@@ -54,13 +51,13 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Debug.Log("End");
         if (transform.parent == _dragAndDropCanvas)
         {
-            _cardsDeck.currentCards.Add(this.GetComponent<CardValues>());
+            CardsDeck.Instance.currentCards.Add(this.GetComponent<CardValues>());
             _rectTransform.DOLocalMove(_startPosition, 0.25f).SetEase(Ease.Linear).OnComplete(delegate
             {
                 transform.parent = _currentCanvas;
             });
             transform.DORotate(_startRotation,0.25f).SetEase(Ease.Linear);
-            _cardsDeck.ResetCardsRotation();
+            CardsDeck.Instance.ResetCardsRotation();
         }
         DownScaleCardOnDeck();
         _cardUI.CancelIgnoreRaycasts();
